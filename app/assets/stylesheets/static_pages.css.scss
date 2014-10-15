@@ -1,0 +1,22 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.sub-container {
+	border-radius: 2px;
+	width: 496px;
+
+	margin: auto;
+	margin-top: 90px;
+	margin-bottom: 70px;
+
+	padding: 33px;
+	background: rgba(138, 178, 188, .08);
+}
+
+.main-heading {
+	color: rgb(218, 31, 61);
+	text-align: center;
+
+	margin-top: -65px;
+}
