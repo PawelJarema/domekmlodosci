@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Dom Młodosci</title>
+  <title>Domek Młodosci</title>
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 
-  <link href='http://fonts.googleapis.com/css?family=Josefin+Sans|Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah|Josefin+Sans&subset=latin-ext' rel='stylesheet' type='text/css'>
 </head>
 <body>
 	<div class="container">
@@ -50,11 +50,40 @@
 			<img src="/img/icon/dojazd.png" id="menu3">
 			<img src="/img/icon/kontakt.png" id="menu4">
 		</div>
-		
+
 		<%= yield %>
 	</div>
-
-	
-
 </body>
+
+	<script>
+		$(document).ready(function() {
+			// functions
+
+			function navigate(url) {
+				window.location.href = url + "#text";
+			}
+
+			// onclicks
+
+			$('#menu1').on('click', function(e) {
+				navigate('<%= static_pages_info_path %>');
+			});
+			$('#menu2').on('click', function(e) {
+				navigate('<%= static_pages_prices_path %>');
+			});
+			$('#menu3').on('click', function(e) {
+				navigate('<%= static_pages_map_path %>');
+			});
+			$('#menu4').on('click', function(e) {
+				navigate('<%= static_pages_contact_path %>');
+			});
+
+			$('#menu4-btn').on('click', function(e) {
+				e.preventDefault();
+				$('#menu4-btn').attr('src', '/img/icon/btn-pressed.png');
+				$('#menu4').click();
+			});
+		});
+	</script>
+
 </html>
