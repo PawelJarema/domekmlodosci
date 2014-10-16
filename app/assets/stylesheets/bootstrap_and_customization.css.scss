@@ -21,6 +21,17 @@ strong {
 	font-size: 1.2em;
 }
 
+.loader {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	z-index: 9999;
+	background: url('/img/icon/loader.gif') 50% 50% no-repeat #fff;
+}
+
 .navigation {
 	position: relative;
 	height: 100px;
