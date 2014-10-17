@@ -14,7 +14,9 @@
 	<div class="container">
 		<div class="navigation">
 			<span class="contact contact-left">Prawdzik@domekmlodosci.pl</span>
-			<div class="logo"><img class="logo" src="/img/icon/logo.png"></div>
+			<div class="logo">
+				<img class="logo" src="/img/icon/logo.png"><h1 class="logo-heading">Domek<br/>Młodości</h1>
+			</div>
 			<span class="contact contact-right"><img src="/img/icon/phone.png"> 504 123 644,<br/>512 073 600<br/>Prawdzik@domekmlodosci.pl</span>
 		</div>
 		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -54,7 +56,29 @@
 		</div>
 
 		<%= yield %>
+
+		<div class="gallery">
+			<strong>Galeria</strong>
+			<img src="/img/slider/slajd1.png"/>
+			<img src="/img/slider/slajd2.png"/>
+			<img src="/img/slider/slajd3.png"/>
+			<img src="/img/slider/slajd4.png"/>
+		</div>
 	</div>
+
+	<div class="modal fade">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+	        <h4 class="modal-title">Galeria</h4>
+	      </div>
+	      <div class="modal-body">
+	        <img src=""/>
+	      </div>
+	    </div><!-- BOOTSTRAP MODAL /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
 </body>
 
 	<script>
@@ -89,6 +113,12 @@
 				e.preventDefault();
 				$('#menu4-btn').attr('src', '/img/icon/btn-pressed.png');
 				$('#menu4').click();
+			});
+
+			$('.gallery > img').on('click', function(e) {
+				var $path = $(this).attr('src');
+				$('.modal').modal('show');
+				$('.modal img').attr('src', $path);
 			});
 		});
 	</script>

@@ -6,12 +6,45 @@
 	border-radius: 2px;
 	width: 496px;
 
-	margin: auto;
-	margin-top: 90px;
-	margin-bottom: 70px;
+	float: left;
+	margin: 90px 0 100px 130px;
 
 	padding: 33px;
-	background: rgba(138, 178, 188, .08);
+	background: rgba(138, 178, 188, .03);
+}
+
+.gallery {
+	border-radius: 2px;
+	width: 280px;
+
+
+	float: right;
+	margin: 90px 57px 15px 0;
+
+	padding: 33px;
+
+
+	img {
+		opacity: .9;
+
+		padding: 5px;
+		border: 1px solid #ccc;
+
+		width: 100px;
+		height: auto;
+
+		margin: 5px 5px 5px 0;
+		display: inline-block;
+	}
+
+	img:hover {
+		cursor: pointer;
+		opacity: 1;
+	}
+}
+
+.modal-body > img {
+	width: 568px;
 }
 
 .main-heading {
