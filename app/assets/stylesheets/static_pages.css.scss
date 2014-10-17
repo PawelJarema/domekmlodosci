@@ -63,3 +63,36 @@ input.btn {
 	width: 200px;
 	margin-top: 15px !important;
 }
+
+.bar {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+
+	z-index: 1;
+
+	img {
+		position: absolute;
+		bottom: 0;
+		width:150px;
+		z-index: 1;
+		opacity: .4;
+	}
+
+	.a {
+		left: 150px;
+	}
+	.b {
+		left: 300px;
+	}
+	.c {
+		right:0;
+	}
+	.d {
+		right: 150px;
+		bottom: -35px;
+	}
+	.e {
+		right: 300px;
+	}
+}
