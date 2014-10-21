@@ -96,3 +96,10 @@ input.btn {
 		right: 300px;
 	}
 }
+
+@media (max-width: 1626px)
+{
+	.bar {
+		display: none;
+	}
+}
