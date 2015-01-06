@@ -1,0 +1,5 @@
+=simple_form_for :photo, url: '/editor/save_photo' do |f|
+	%br
+	=f.input :photo, as: :file, label: 'galeria'
+	%br
+	=f.submit :'zapisz zdjęcie', style: 'width: 100%'

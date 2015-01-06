@@ -1,0 +1,10 @@
+%div.col-md-4
+	=render 'photo_form'
+	%br
+	-Photo.all.each do |photo|
+		%div{:style => 'display: inline-block'}
+			=image_tag photo.photo.url(:thumb)
+			%br
+			=link_to 'skasuj', "/editor/delete_photo/#{photo.id}", method: :post, style: "padding-left: 28px;"
+
+	

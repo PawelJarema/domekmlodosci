@@ -30,7 +30,7 @@
 
 	<div class="container">
 		
-		<div style="width: 98% !important; margin-left: 1% !important; padding: 5px; border: 8px solid rgba(1,1,1,.1); border-top: none; border-radius: 2px;" id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+		<div style="width: 98% !important; margin-left: 1% !important; padding: 5px; border: 8px solid rgba(1,1,1,.1); border-top: none; border-radius: 2px;" id="carousel-example-generic" class="carousel slide hide" data-ride="carousel">
 		  <ol class="carousel-indicators" style="position: absolute; top: 5.5px;">
 		    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
 		    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
@@ -62,32 +62,14 @@
 		<div class="menu">
 			<img src="/img/icon/informacje.png" id="menu1">
 			<img src="/img/icon/cennik.png" id="menu2">
-			<img src="/img/icon/dojazd.png" id="menu3">
-			<img src="/img/icon/kontakt.png" id="menu4">
+			<img src="/img/icon/dojazd.png" id="menu3" class="hide">
+			<img src="/img/icon/kontakt.png" id="menu4" class="hide">
 		</div>
 
-		<%= yield %>
-
-		<div class="gallery">
-			<strong>Galeria</strong>
-			<% Photo.all.each do |photo| %>
-				<%= image_tag photo.photo.url(:medium) %>
-			<% end %>
+		<div class="container">
+			<%= yield %>
 		</div>
 	</div>
-
-	<div class="modal fade">
-	  <div class="modal-dialog">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <h4 class="modal-title">Galeria</h4>
-	      </div>
-	      <div class="modal-body">
-	        <img src=""/>
-	      </div>
-	    </div><!-- BOOTSTRAP MODAL /.modal-content -->
-	  </div><!-- /.modal-dialog -->
-	</div><!-- /.modal -->
 </body>
 
 	<script>
@@ -106,13 +88,13 @@
 			// onclicks
 
 			$('#menu1').on('click', function(e) {
-				navigate('<%= static_pages_info_path %>');
+				navigate('<%= editor_informacje_path %>');
 			});
 			$('#menu2').on('click', function(e) {
-				navigate('<%= static_pages_prices_path %>');
+				navigate('<%= editor_cennik_path %>');
 			});
 			$('#menu3').on('click', function(e) {
-				navigate('<%= static_pages_map_path %>');
+				navigate('<%= editor_dojazd_path %>');
 			});
 			$('#menu4').on('click', function(e) {
 				navigate('<%= static_pages_contact_path %>');

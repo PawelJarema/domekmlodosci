@@ -1,0 +1,9 @@
+%div.col-md-8
+	%div{:style => 'width: 440px; margin: auto'}
+		=simple_form_for :html do |f|
+			=f.hidden_field :id, value: @html.id
+			%br
+				=f.input :title, label: 'tytuł', value: @html.title, input_html: { style: 'width: 100% !important; font-size: 2.em; height: 50px'}
+			%br
+			=f.bootsy_area :html, label: 'treść', value: @html.html, style: 'width: 100%; height: 280px;'
+			=f.submit :'zapisz zmiany', style: 'width: 100% !important; margin-bottom: 50px;'

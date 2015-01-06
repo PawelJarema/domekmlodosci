@@ -1,4 +1,20 @@
 Rails.application.routes.draw do
+  mount Bootsy::Engine => '/bootsy', as: 'bootsy'
+
+  get '/admin', to: redirect('/editor/informacje')
+
+  post 'editor/save_photo' => 'editor#save_photo'
+  post 'editor/delete_photo/:id' => 'editor#delete_photo'
+
+  get 'editor/informacje'
+  post 'editor/informacje' => 'editor#save'
+
+  get 'editor/cennik'
+  post 'editor/cennik' => 'editor#save'
+
+  get 'editor/dojazd'
+  post 'editor/dojazd' => 'editor#save'
+
   root 'static_pages#info'
 
   get 'static_pages/info'

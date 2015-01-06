@@ -51,3 +51,13 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+#html
+gem 'haml'
+
+#store images on aws
+gem 'paperclip'
+gem 'aws-sdk'
+
+#editor
+gem 'bootsy'
+gem 'simple_form'
