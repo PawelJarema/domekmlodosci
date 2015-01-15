@@ -10,15 +10,19 @@
 </head>
 <body>
 	<div class="loader"></div>
-
+	<script>
+		var message = '<%= flash[:notice] %>';
+		if (message.length > 0)
+			alert(message);
+	</script>
 	<div class="navigation">
-			<div class="container">
-				<span class="contact contact-left">Prawdzik@domekmlodosci.pl</span>
-				<div class="logo">
-					<img class="logo" src="/img/icon/logo.png"><h1 class="logo-heading">Domek<br/>Młodości</h1>
-				</div>
-				<span class="contact contact-right"><img src="/img/icon/phone.png"> 504 123 644,<br/>512 073 600<br/>Prawdzik@domekmlodosci.pl</span>
+		<div class="container">
+			<span class="contact contact-left">Prawdzik@domekmlodosci.pl</span>
+			<div class="logo">
+				<img class="logo" src="/img/icon/logo.png"><h1 class="logo-heading">Domek<br/>Młodości</h1>
 			</div>
+			<span class="contact contact-right"><img src="/img/icon/phone.png"> 504 123 644,<br/>512 073 600<br/>Prawdzik@domekmlodosci.pl</span>
+		</div>
 	</div>
 
 	<div class="bar">

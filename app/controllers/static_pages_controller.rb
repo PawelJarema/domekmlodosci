@@ -23,7 +23,8 @@ class StaticPagesController < ApplicationController
     @message = params[:message]
 
     ContactMailer.send_contact(@name, @email, @company, @phone, @subject, @message).deliver!
-    puts params
+    flash[:notice] = "Twoja wiadomość została wysłana"
+    redirect_to :root
   end
 
 end
