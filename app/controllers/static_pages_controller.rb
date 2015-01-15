@@ -14,4 +14,16 @@ class StaticPagesController < ApplicationController
   def contact
   end
 
+  def send_mail
+    @name = params[:name]
+    @email = params[:email]
+    @company = params[:company]
+    @phone = params[:phone]
+    @subject = params[:subject]
+    @message = params[:message]
+
+    ContactMailer.send_contact(@name, @email, @company, @phone, @subject, @message).deliver!
+    puts params
+  end
+
 end

@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   get 'static_pages/map'
 
   get 'static_pages/contact'
-
+  post 'static_pages/send_mail' => 'static_pages#send_mail'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

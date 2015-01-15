@@ -7,7 +7,8 @@
 	<h1 class="main-heading">Kontakt</h1><br/>
 	<p>Zapraszamy do rezerwacji telefonicznej: <i style="color: #ed1846; opacity: .8;">504 123 644, 512 073 600</i><br/>lub przez e-mail: <i style="color: #ed1846; opacity: .7;"><a href="mailto:Prawdzik@domekmlodosci.pl">Prawdzik@domekmlodosci.pl</a></i></p>
 	<div id="DkrContactForm">
-		<form class="form" id="cntnt01moduleform_1" method="post" action="http://www.domekmlodosci.pl/kontakt.html" enctype="multipart/form-data">
+		<form class="form" id="cntnt01moduleform_1" method="post" action="/static_pages/send_mail" enctype="multipart/form-data">
+			<%= tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token) %>
 			<div class="hidden">
 				<input class="form-control" name="mact" value="FormBuilder,cntnt01,default,0" type="hidden">
 				<input class="form-control" name="cntnt01returnid" value="16" type="hidden">
@@ -21,35 +22,35 @@
 			<fieldset id="fbrp__15" class="info">     				        	
 				<div id="fbrp__9Validate" class="field  senderName">
 					<label for="fbrp__9">Imię i nazwisko *:</label><br/>
-					<input class="form-control" name="cntnt01fbrp__9" value="" size="25" maxlength="80" id="fbrp__9" type="text">
+					<input class="form-control" name="name" value="" size="25" maxlength="80" id="fbrp__9" type="text">
 					<span class="textfieldRequiredMsg">Pole wymagane</span>
 				</div>     				        	
 				<div id="fbrp__10Validate" class="field  companyName">
 					<label for="fbrp__10">Nazwa firmy *:</label><br/>
-					<input class="form-control" name="cntnt01fbrp__10" value="" size="25" maxlength="80" id="fbrp__10" type="text">
+					<input class="form-control" name="company" value="" size="25" maxlength="80" id="fbrp__10" type="text">
 					<span class="textfieldRequiredMsg">Pole wymagane</span>
 				</div>     				        	
 				<div id="fbrp__11Validate" class="field  email">
 					<label for="fbrp__11">Email *:</label><br/>
-					<input class="form-control" name="cntnt01fbrp__11" value="" size="25" maxlength="128" id="fbrp__11" type="email">
+					<input class="form-control" name="email" value="" size="25" maxlength="128" id="fbrp__11" type="email">
 					<span class="textfieldRequiredMsg">Pole wymagane</span>
 					<span class="textfieldInvalidFormatMsg">Niepoprawny e-mail</span>
 				</div>     				        	
 				<div class="field  phone">
 					<label for="fbrp__12">Telefon:</label><br/>
-					<input class="form-control" name="cntnt01fbrp__12" value="" size="25" maxlength="" id="fbrp__12" type="text">
+					<input class="form-control" name="phone" value="" size="25" maxlength="" id="fbrp__12" type="text">
 					<span class="textfieldRequiredMsg">Pole wymagane</span>
 				</div>     				        	
 			</fieldset>     				        	
 			<fieldset id="fbrp__18" class="message">     				        	
 				<div id="fbrp__19Validate" class="field  subject">
 					<label for="fbrp__19">Temat *:</label><br/>
-					<input class="form-control" id="subject" name="cntnt01fbrp__19" value="" size="25" maxlength="128" type="text">
+					<input class="form-control" id="subject" name="subject" value="" size="25" maxlength="128" type="text">
 					<span class="textfieldRequiredMsg">Pole wymagane</span>
 				</div>     				        	
 				<div id="fbrp__20Validate" class="field  message">
 					<label for="fbrp__20">Wiadomość *:</label><br/>
-					<textarea name="cntnt01fbrp__20" cols="15" rows="10" class="form-control cms_textarea" id="fbrp__20"></textarea>
+					<textarea name="message" cols="15" rows="10" class="form-control cms_textarea" id="message"></textarea>
 					<span class="textfieldRequiredMsg">Pole wymagane</span>
 				</div>     				        	
 				<div class="buttons">
