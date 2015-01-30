@@ -85,8 +85,8 @@ Rails.application.configure do
     :storage => :s3,
     :s3_credentials => {
       :bucket => 'domekmlodosci',
-      :access_key_id => 'AKIAJGQPLXGUUFY65DIQ',
-      :secret_access_key => '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'
+      :access_key_id => ENV['aws_id'],
+      :secret_access_key => ENV['aws_key']
     }
   }
   
