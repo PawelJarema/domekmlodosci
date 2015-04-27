@@ -149,14 +149,14 @@
 
 				$('.photo-left').on('click', function(e) {
 					$path = $('.large-photo').attr('src');
-					$prev = $('img[src=' + $path + ']').prev();
+					$prev = $('img[src="' + $path + '"]').prev();
 					if ($prev != null)
 						showImage($prev.attr('src'))
 				});
 
 				$('.photo-right').on('click', function(e) {
 					$path = $('.large-photo').attr('src');
-					$next = $('img[src=' + $path + ']').next();
+					$next = $('img[src="' + $path + '"]').next();
 					if ($next != null)
 						showImage($next.attr('src'));
 				});
