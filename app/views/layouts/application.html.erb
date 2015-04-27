@@ -87,7 +87,7 @@
 	        <h4 class="modal-title">Galeria</h4>
 	      </div>
 	      <div class="modal-body">
-	        <img src=""/>
+	        <img class="large-photo" src=""/>
 	        <a class="left carousel-control photo-left">
 				    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
 				    <span class="sr-only">Previous</span>
@@ -148,15 +148,15 @@
 				showImage($path);
 
 				$('.photo-left').on('click', function(e) {
-					$path = $(this).closest('img').attr('src');
-					$prev = $('.gallery > img[src=' + $path + ']').prev();
+					$path = $('.large-photo').attr('src');
+					$prev = $('img[src=' + $path + ']').prev();
 					if ($prev != null)
 						showImage($prev.attr('src'))
 				});
 
 				$('.photo-right').on('click', function(e) {
-					$path = $(this).closest('img').attr('src');
-					$next = $('.gallery > img[src=' + $path + ']').next();
+					$path = $('.large-photo').attr('src');
+					$next = $('img[src=' + $path + ']').next();
 					if ($next != null)
 						showImage($next.attr('src'));
 				});
