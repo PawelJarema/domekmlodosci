@@ -96,7 +96,7 @@ Rails.application.configure do
     port:                 587,
     domain:               'domekmlodosci.pl',
     user_name:            'pavel.jarema@gmail.com',
-    password:             'karma108',
+    password:             'kotsobota',
     authentication:       'plain',
     enable_starttls_auto: true  
   }
